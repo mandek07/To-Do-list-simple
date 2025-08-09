@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do List Santai — Tahap 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+<div class="stars2"></div>
+<div class="stars3"></div>
+
+  <div class="app">
+    <header class="header">
+      <div class="header-left">
+        <h1>🌿 To-Do List Santai</h1>
+        <p class="tag">Fondasi UI — Tahap 1</p>
+      </div>
+
+      <div class="header-center">
+        <input id="search" type="search" placeholder="Cari tugas..." aria-label="Cari tugas">
+      </div>
+
+      <div class="header-right">
+        <button id="darkToggle" class="icon-btn" aria-label="Toggle dark">🌙</button>
+      </div>
+    </header>
+
+    <!-- Composer: input utama + tanggal bawah + tombol -->
+    <section class="composer">
+      <div class="composer-main">
+        <input id="taskInput" type="text" placeholder="Tulis tugas baru..." aria-label="Tulis tugas">
+        <div class="meta-below">
+          <label>
+            <span class="meta-label">Tanggal (opsional)</span>
+            <input id="taskDate" type="date" aria-label="Tanggal tugas">
+          </label>
+        </div>
+      </div>
+      <div class="composer-action">
+        <button id="addBtn" class="btn primary">＋ Tambah</button>
+      </div>
+    </section>
+
+    <!-- Toolbar di atas daftar tugas -->
+    <section class="toolbar">
+      <div class="toolbar-left">
+        <button id="refreshBtn" class="btn">🔄 Refresh</button>
+        <button id="clearAllBtn" class="btn danger">🗑️ Hapus Semua</button>
+      </div>
+
+      <div class="toolbar-right">
+        <div class="stats">
+          <span>Total: <b id="statTotal">0</b></span>
+          <span>Selesai: <b id="statDone">0</b></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daftar tugas -->
+    <section class="list-wrap">
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+      <div id="emptyMessage" class="empty">Belum ada tugas — santai dulu ☕</div>
+    </section>
+
+    <footer class="footer">
+      <small>MADE BY • FIRMAN O.G</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
